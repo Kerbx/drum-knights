@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-const MAX_SPEED = 100
-const ACCELERATION = 500
-const FRICTION = 600
+const MAX_SPEED = 110
+const ACCELERATION = 450
+const FRICTION = 1000
 
 @onready var axis = Vector2.ZERO
 

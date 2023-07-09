@@ -1,13 +1,57 @@
 [gd_scene load_steps=4 format=3 uid="uid://dd1lx40qsrv83"]
 
 [ext_resource type="Texture2D" uid="uid://bvw7bp14ytntr" path="res://Resources/goida.png" id="1_f76k5"]
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_o43ud"]
+
+[sub_resource type="GDScript" id="GDScript_4xugy"]
+script/source = "extends CharacterBody2D
+
+
+@export var MAX_SPEED = 300
+@export var ACCELERATION = 1500
+@export var FRICTION = 1200
+
+@onready var axis = Vector2.ZERO
+
+
+func _physics_process(delta):
+	move(delta)
+
+
+func get_input_axis():
+	axis.x = int(Input.is_action_pressed(\"move_right\")) - int(Input.is_action_pressed(\"move_left\"))
+	axis.y = int(Input.is_action_pressed(\"move_down\")) - int(Input.is_action_pressed(\"move_up\"))
+	
+	return axis.normalized()
+
+
+func move(delta):
+	axis = get_input_axis()
+
+	if axis == Vector2.ZERO:
+		apply_friction(FRICTION * delta)
+	else:
+		apply_movement(axis * ACCELERATION * delta)
+
+	move_and_slide()
+
+
+func apply_friction(amount):
+	if velocity.length() > amount:
+		velocity -= velocity.normalized() * amount
+	else:
+		velocity = Vector2.ZERO
+
+
+func apply_movement(accel):
+	velocity += accel
+	velocity.limit_length(MAX_SPEED)
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_an1w3"]
 radius = 7.0
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_o43ud")
+script = SubResource("GDScript_4xugy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_an1w3")
