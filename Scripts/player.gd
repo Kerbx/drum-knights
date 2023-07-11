@@ -10,12 +10,6 @@ func _physics_process(delta):
 	moveDirection.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	moveDirection.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	
-#	if moveDirection == Vector2(1, 1):
-		
-
-#	if(moveDirection.x != 0):
-#		moveDirection.y = 0
-
 	velocity = moveDirection.normalized() * speed * delta
 	move_and_slide()
 
@@ -23,6 +17,8 @@ func _physics_process(delta):
 # OLD CODE DOWN HERE.
 # commented because of i don't want player to sliding like a fucking ball.
 # but in new code (up here) a problem with diagonal movement. i'll try to fix it now.
+# UPD: fixed.
+# code down below for history, but i don't think we'll use it.
 
 #const MAX_SPEED = 110
 #const ACCELERATION = 450
