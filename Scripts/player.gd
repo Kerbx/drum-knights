@@ -3,18 +3,20 @@ extends CharacterBody2D
 
 @export var speed : float = 10000
 
-var move_Direction = Vector2.ZERO
+var moveDirection = Vector2.ZERO
 
 
 func _physics_process(delta):
-	move_Direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-	move_Direction.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	moveDirection.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	moveDirection.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	
+#	if moveDirection == Vector2(1, 1):
+		
 
+#	if(moveDirection.x != 0):
+#		moveDirection.y = 0
 
-	if(move_Direction.x != 0):
-		move_Direction.y = 0
-
-	velocity = move_Direction.normalized() * speed * delta
+	velocity = moveDirection.normalized() * speed * delta
 	move_and_slide()
 
 
