@@ -13,7 +13,14 @@ func _physics_process(delta):
 	velocity = moveDirection.normalized() * speed * delta
 	move_and_slide()
 
-
+func _on_leave_level_trigger_body_entered(body):
+	var currentSceneNum = int(get_parent().name.right(1))
+	if currentSceneNum == 5:
+		print("end")
+		return
+	get_tree().change_scene_to_file("res://Scenes/Levels/level{levelNum}.tscn".format({"levelNum": currentSceneNum + 1}))
+	
+	
 # OLD CODE DOWN HERE.
 # commented because of i don't want player to sliding like a fucking ball.
 # but in new code (up here) a problem with diagonal movement. i'll try to fix it now.
