@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://djbq5q7cgy810"]
+[gd_scene load_steps=6 format=3 uid="uid://djbq5q7cgy810"]
 
 [ext_resource type="TileSet" uid="uid://b4drtw727mihr" path="res://Resources/tileset.tres" id="1_mochr"]
 [ext_resource type="PackedScene" uid="uid://dd1lx40qsrv83" path="res://Scenes/player.tscn" id="2_08j3x"]
 [ext_resource type="PackedScene" uid="uid://bkkf3pd7y1flu" path="res://Scenes/leaveLevelTrigger.tscn" id="3_eoevf"]
 [ext_resource type="PackedScene" uid="uid://bo6p3upmloebh" path="res://Scenes/spawnPoint.tscn" id="4_oujrn"]
-[ext_resource type="PackedScene" uid="uid://cl8mbfgdtw3ao" path="res://Scenes/vignetteLayer.tscn" id="5_efa0l"]
 
 [sub_resource type="GDScript" id="GDScript_wv42q"]
 script/source = "extends Node2D
@@ -40,11 +39,8 @@ layer_1/tile_data = PackedInt32Array(-589787, 851970, 1, -655323, 851970, 0, -58
 position = Vector2(-1, 0)
 
 [node name="leaveLevelTrigger" parent="." instance=ExtResource("3_eoevf")]
-position = Vector2(0, -816)
+position = Vector2(-33, -204)
 
-[node name="Node2D" parent="." instance=ExtResource("4_oujrn")]
-position = Vector2(-78, -94)
-
-[node name="CanvasLayer" parent="." instance=ExtResource("5_efa0l")]
+[node name="spawnPoint" parent="." instance=ExtResource("4_oujrn")]
 
 [connection signal="body_entered" from="leaveLevelTrigger" to="Player" method="_on_leave_level_trigger_body_entered"]

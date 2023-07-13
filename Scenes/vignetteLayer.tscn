@@ -6,7 +6,7 @@
 shader = ExtResource("1_3r7pd")
 shader_parameter/color = null
 shader_parameter/multiplier = 0.2
-shader_parameter/softness = 1.2
+shader_parameter/softness = 0.6
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -16,6 +16,8 @@ layout_direction = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
