@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6c6ak6ibu102"]
+
+[ext_resource type="PackedScene" uid="uid://c1kk2ph47wld0" path="res://Scenes/tilemap.tscn" id="1_hlqnt"]
+[ext_resource type="PackedScene" uid="uid://bo6p3upmloebh" path="res://Scenes/spawnPoint.tscn" id="2_x6nuw"]
+
+[node name="level3" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_hlqnt")]
+
+[node name="spawnPoint" parent="." instance=ExtResource("2_x6nuw")]

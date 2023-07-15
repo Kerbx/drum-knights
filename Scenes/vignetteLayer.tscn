@@ -6,7 +6,7 @@
 shader = ExtResource("1_3r7pd")
 shader_parameter/color = null
 shader_parameter/multiplier = 0.2
-shader_parameter/softness = 0.6
+shader_parameter/softness = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
