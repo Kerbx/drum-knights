@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bualki0fxa14l"
+path="res://.godot/imported/Before the Shelling.mp3-ebd287c62a49be4cbdb0a258d3bd1212.mp3str"
+
+[deps]
+
+source_file="res://Resources/Audio/Before the Shelling.mp3"
+dest_files=["res://.godot/imported/Before the Shelling.mp3-ebd287c62a49be4cbdb0a258d3bd1212.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

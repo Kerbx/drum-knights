@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpl2b1sy61y76"
+path="res://.godot/imported/The Shelling.mp3-45fc06f5b051cd9376603122558ba85d.mp3str"
+
+[deps]
+
+source_file="res://Resources/Audio/The Shelling.mp3"
+dest_files=["res://.godot/imported/The Shelling.mp3-45fc06f5b051cd9376603122558ba85d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co8kx0xc14id7"
+path="res://.godot/imported/You Are (Not) Hated.mp3-b5904fa92c84e9d06a94a40644c43dda.mp3str"
+
+[deps]
+
+source_file="res://Resources/Audio/You Are (Not) Hated.mp3"
+dest_files=["res://.godot/imported/You Are (Not) Hated.mp3-b5904fa92c84e9d06a94a40644c43dda.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
